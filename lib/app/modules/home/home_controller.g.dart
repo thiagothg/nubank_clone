@@ -9,21 +9,21 @@ part of 'home_controller.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$HomeController on _HomeControllerBase, Store {
-  final _$valueAtom = Atom(name: '_HomeControllerBase.value');
+  final _$showMenuAtom = Atom(name: '_HomeControllerBase.showMenu');
 
   @override
-  int get value {
-    _$valueAtom.context.enforceReadPolicy(_$valueAtom);
-    _$valueAtom.reportObserved();
-    return super.value;
+  bool get showMenu {
+    _$showMenuAtom.context.enforceReadPolicy(_$showMenuAtom);
+    _$showMenuAtom.reportObserved();
+    return super.showMenu;
   }
 
   @override
-  set value(int value) {
-    _$valueAtom.context.conditionallyRunInAction(() {
-      super.value = value;
-      _$valueAtom.reportChanged();
-    }, _$valueAtom, name: '${_$valueAtom.name}_set');
+  set showMenu(bool value) {
+    _$showMenuAtom.context.conditionallyRunInAction(() {
+      super.showMenu = value;
+      _$showMenuAtom.reportChanged();
+    }, _$showMenuAtom, name: '${_$showMenuAtom.name}_set');
   }
 
   final _$_HomeControllerBaseActionController =
@@ -41,7 +41,7 @@ mixin _$HomeController on _HomeControllerBase, Store {
 
   @override
   String toString() {
-    final string = 'value: ${value.toString()}';
+    final string = 'showMenu: ${showMenu.toString()}';
     return '{$string}';
   }
 }

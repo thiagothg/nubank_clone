@@ -6,10 +6,11 @@ class AppWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       navigatorKey: Modular.navigatorKey,
-      title: 'Flutter Slidy',
+      title: 'Flutter Nubank Clone',
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.purple[800],
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.purple,
+        brightness: Brightness.dark
       ),
       initialRoute: '/',
       onGenerateRoute: Modular.generateRoute,
