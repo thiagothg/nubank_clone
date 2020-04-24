@@ -6,7 +6,8 @@ import 'package:flutter_modular/flutter_modular.dart';
 void main() {
   
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-    statusBarBrightness: Brightness.dark
+    statusBarBrightness: Brightness.dark,
+    statusBarColor: Colors.transparent
   ));
 
   runApp(ModularApp(module: AppModule()));

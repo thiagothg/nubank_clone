@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:nubank_clone/app/shared/widgets/bottom_menu.dart';
-import 'package:nubank_clone/app/shared/widgets/item_menu_bottom.dart';
-import 'package:nubank_clone/app/shared/widgets/menu_app.dart';
-import 'package:nubank_clone/app/shared/widgets/my_app_bar.dart';
-import 'package:nubank_clone/app/shared/widgets/my_dots_app.dart';
-import 'package:nubank_clone/app/shared/widgets/page_view_app.dart';
+import 'package:nubank_clone/app/shared/widgets/home/bottomMenu/bottom_menu.dart';
+import 'package:nubank_clone/app/shared/widgets/home/menu/menu_app.dart';
+import 'package:nubank_clone/app/shared/widgets/home/my_app_bar.dart';
+import 'package:nubank_clone/app/shared/widgets/home/page_view/my_dots_app.dart';
+import 'package:nubank_clone/app/shared/widgets/home/page_view/page_view_app.dart';
 import 'home_controller.dart';
 
 class HomePage extends StatefulWidget {
@@ -34,9 +33,9 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
             MyAppBar(
               showMenu: _homeController.showMenu,
               onTap: () {
-                  _homeController.showMenu = !_homeController.showMenu;
-                  _homeController.yPosition = _homeController.showMenu 
-                    ? _screenHeight * 0.75 : _screenHeight * 0.24;
+                _homeController.showMenu = !_homeController.showMenu;
+                _homeController.yPosition = _homeController.showMenu 
+                  ? _screenHeight * 0.75 : _screenHeight * 0.24;
               },
             ),
 

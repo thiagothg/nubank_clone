@@ -14,6 +14,7 @@ class AppWidget extends StatelessWidget {
       ),
       initialRoute: '/',
       onGenerateRoute: Modular.generateRoute,
+      debugShowCheckedModeBanner: false,
     );
   }
 }

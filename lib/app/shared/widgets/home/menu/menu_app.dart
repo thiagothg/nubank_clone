@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
-import 'package:nubank_clone/app/shared/widgets/menu_item.dart';
+import 'package:nubank_clone/app/shared/widgets/home/menu/menu_item.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
 class MenuApp extends StatelessWidget {
