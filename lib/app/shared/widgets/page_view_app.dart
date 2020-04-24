@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:nubank_clone/app/shared/widgets/card_app.dart';
+import 'package:nubank_clone/app/shared/widgets/conta_card.dart';
+import 'package:nubank_clone/app/shared/widgets/credit_card.dart';
+import 'package:nubank_clone/app/shared/widgets/rewards_card.dart';
 
 class PageViewApp extends StatelessWidget {
   final double screenHeight;
@@ -11,7 +14,7 @@ class PageViewApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedPositioned(
-      duration: Duration(milliseconds: 300),
+      duration: Duration(milliseconds: 200),
       top: screenHeight,
       height: MediaQuery.of(context).size.height * 0.45,
       left: 0,
@@ -22,10 +25,15 @@ class PageViewApp extends StatelessWidget {
           onPageChanged: onChanged,
           physics: showMenu ? NeverScrollableScrollPhysics() : BouncingScrollPhysics(),
           children: <Widget>[
-            CardApp(),
-            CardApp(),
-
-            CardApp(),
+            CardApp(
+              child: CreditCard(),
+            ),
+            CardApp(
+              child: ContaCard(),
+            ),
+            CardApp(
+              child: RewardsCard(),
+            ),
           ]
         ),
       ),

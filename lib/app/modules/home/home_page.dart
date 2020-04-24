@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:nubank_clone/app/shared/widgets/bottom_menu.dart';
+import 'package:nubank_clone/app/shared/widgets/item_menu_bottom.dart';
 import 'package:nubank_clone/app/shared/widgets/menu_app.dart';
 import 'package:nubank_clone/app/shared/widgets/my_app_bar.dart';
 import 'package:nubank_clone/app/shared/widgets/my_dots_app.dart';
@@ -43,6 +45,15 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
               top: _screenHeight * 0.20,
             ),
 
+            BottomMenu(
+              homeController: _homeController,
+            ),
+
+            MyDotsApp(
+              showMenu: _homeController.showMenu,
+              top: _screenHeight * 0.7,
+              currentIndex: _homeController.currentIndex,
+            ),
             PageViewApp(
               showMenu: _homeController.showMenu,
               screenHeight: _homeController.yPosition,
@@ -83,11 +94,6 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
               },
             ),
             
-            MyDotsApp(
-              showMenu: _homeController.showMenu,
-              top: _screenHeight * 0.7,
-              currentIndex: _homeController.currentIndex,
-            )
           ],
         ),
       )

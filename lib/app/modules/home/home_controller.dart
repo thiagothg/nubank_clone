@@ -5,8 +5,12 @@ part 'home_controller.g.dart';
 class HomeController = _HomeControllerBase with _$HomeController;
 
 abstract class _HomeControllerBase with Store {
+
   @observable
   bool showMenu = false;
+
+  @observable
+  bool showSaldo = false;
 
   @observable
   int currentIndex = 0;
